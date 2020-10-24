@@ -2,6 +2,8 @@ import express from "express";
 import cors from 'cors';
 import 'dotenv/config.js';
 
+import './db/connection.js';
+
 const app = express()
 
 // CORS middleware
