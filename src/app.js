@@ -1,8 +1,8 @@
-import express from "express";
+import express from 'express';
 import cors from 'cors';
 import 'dotenv/config.js';
 
-import productRoutes from './routes/product.routes.js';
+import indexRoute from './routes/index.js';
 import './db/connection.js';
 
 const app = express()
@@ -11,8 +11,8 @@ const app = express()
 app.use(cors())
 // Request parser middleware
 app.use(express.json())
-
-app.use('/', productRoutes)
+// Routes middleware
+app.use('/', indexRoute)
 
 const PORT = process.env.PORT
 app.listen(PORT, () => console.log(`Server has started on port ${PORT}...`))
