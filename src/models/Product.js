@@ -10,12 +10,12 @@ const ProductSchema = new Schema(
         price: Number,
         category: String,
         manufacturer: String,
-        expires: String,
-        pcs: Number,
+        expires: Date,
+        units: String,
         stock: Number
     }
 )
 
-const ProductModel = mongoose.model('Product', ProductSchema)
+const Product = mongoose.model('Product', ProductSchema)
 
-export default ProductModel;
+export default Product;
